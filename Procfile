@@ -1,0 +1,1 @@
+web : sh hersetup.sh && streamlit run rocket_house_app.py
