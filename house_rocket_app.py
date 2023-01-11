@@ -23,7 +23,7 @@ def get_data( path ):
 
 # Extract
 
-path = "../data/kc_house_data.csv"
+path = "data/kc_house_data.csv"
 
 data = get_data(path)
 
