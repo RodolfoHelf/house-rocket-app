@@ -61,12 +61,20 @@ def data_load(data):
     c2.subheader("Aplicativo criado por [Rodolfo Helfenstein](https://www.linkedin.com/in/rodolfo-helfenstein/)")
 
     show_data = st.checkbox(
-        "Mostrar dados",
+        "Mostrar Dados",
+        value= False
+    )
+
+    show_data_analisys = st.checkbox(
+        "Mostrar Análise",
         value= False
     )
 
     if show_data:
         st.dataframe(data)
+
+    if show_data_analisys:
+        st.dataframe(data[["price","bedrooms","bathrooms","sqft_lot","sqft_living","sqft_above","sqft_basement","floors","condition","grade","yr_built"]].describe())
 
     c1, c2 = st.columns((1, 1) )  
 
