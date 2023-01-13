@@ -286,6 +286,17 @@ def data_load(data):
     st.subheader("Recomendações de Compra e Sugestão de preço")
     st.dataframe(data[["id","date","zipcode","price","season","status","sell_price"]])
 
+    profit = 0
+    not_profit = 0
+
+    for index in range(len(data)):
+        if data.loc[index,"status"] == "Compra":
+            profit+= data.loc[index,"sell_price"] - data.loc[index,"price"]
+        else:
+            not_profit += data.loc[index,"sell_price"] - data.loc[index,"price"]
+
+    st.write(" O lucro obtido pela venda de imóveis com status igual a Compra é {:.2f}% maior que o lucro obtido pelos imóveis com status Não Compra ".format(((profit-not_profit)/not_profit)*100))
+    
     return None
 
 
