@@ -2,6 +2,8 @@
 
 Nesse projeto, é feito uma análise descritiva dos dados dos imóveis vendidos entre maio de 2014 e maio de 2015 do condado de King. São levantadas hipóteses sobre as caracteríscas dos imóveis e verificado se a hipótese é valida ou não . No final, são sugeridas compras de imóveis através da análise dos preços de imóveis por região e posteriormente um possível valor de venda do imóvel de acordo com seu preço e período em que ele foi comprado.
 
+Os dados utilizados foram obtidos do Kagle pelo site: https://www.kaggle.com/datasets/harlfoxem/housesalesprediction
+
 1. Questão de negócio.
 - O que você quer resolver ?
 - Encontrar as melhores oportunidades de
